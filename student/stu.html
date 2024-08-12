@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile</title>
+  <link href="stu.css" type="text/css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <div class="header">
+    <div id="left">
+      <input type="image" src="/login/images/logo" alt="Submit" style="float:left" width="90" height="90">
+      <h1 id="one">CHMS</h1>
+    </div>
+    <div id="logout">
+      <button><i class="fa-solid fa-right-from-bracket"></i> Logout</button>
+     </div>
+  </div>
+  <h1 id="two">Welcome To Student Profile</h1>
+
+  <div class="contents">
+
+    <div class="profile">
+        <img src="/nect/img/download.jpeg" alt="student Photo">
+        <ul>
+          <li>
+            <strong>Name:</strong><br>
+            <strong>ID Number:</strong><br>
+            <strong>Room:</strong>
+          </li>
+    </div>
+
+    <div class="details">
+      <h3><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-journal" viewBox="0 0 16 16">
+        <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z"/>
+        <path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z"/>
+      </svg> General Informations</h3>
+
+      <table>   
+        <tr>
+          <th width="30%"><a href="#">Academic Year</a></th>
+          <td width="2%">:</td>
+          <td> </td>
+        </tr>
+        <tr>
+          <th width="30%"><a href="#">Course</a></th>
+          <td width="2%">:</td>
+          <td>  </td>
+        </tr>
+        <tr>
+          <th width="30%"><a href="#">Address</a></th>
+          <td width="2%">:</td>
+          <td>  </td>
+        </tr>
+        <tr>
+          <th width="30%"><a href="#">Email</a></th>
+          <td width="2%">:</td>
+          <td>  </td>
+        </tr>
+        <tr>
+          <th width="30%"><a href="#">Phone</a></th>
+          <td width="2%">:</td>
+          <td>  </td>
+        </tr>
+      </table>
+    </div>
+
+    <div id="but">
+      <button onclick="openPopup()">Fee Payment</button> 
+      <div id="popup" class="popup">
+        <div class="popup-content">
+          <span class="close" onclick="closePopup()">&times;</span>
+          <p>Month: <span id="month"></span></p>
+          <p>Number of Leaves: <span id="leaves"></span></p>
+          <p>Amount to be Paid: <span id="amount"></span></p>
+          <input type="file" name="come on" id="file">
+          <button onclick="makePayment()">Pay</button>
+          <button onclick="markDue()">Due</button>
+        </div>
+      </div>
+
+
+      <button><a href="/student/compl.html">Complaint</a></button>  
+      <button><a href="/student/leave.html">Leave</a></button>  
+      <button><a href="/student/feedb.html">Feedback</a></button>  
+    </div>
+  </div>
+
+  <div class="footer">
+    <p class="copy"> &copy; Cochin University of Science and Technology </p>
+  </div>
+  <script>
+function openPopup() {
+
+  const month = "July";
+  const leaves = 2;
+  const amount = 100;
+
+  // Set the data in the popup
+  document.getElementById("month").textContent = month;
+  document.getElementById("leaves").textContent = leaves;
+  document.getElementById("amount").textContent = amount;
+
+  // Display the popup
+  document.getElementById("popup").style.display = "block";
+}
+
+function closePopup() {
+  // Hide the popup
+  document.getElementById("popup").style.display = "none";
+}
+
+function makePayment() {
+  
+  console.log("Payment successful!");
+  closePopup();
+}
+
+function markDue() {
+  
+  console.log("");
+  closePopup();
+}
+
+
+  </script>
+  </body>
+  </html>
