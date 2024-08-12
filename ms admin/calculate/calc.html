@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculations</title>
+  <link href="calc.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="header">
+    <div id="left">
+      <input type="image" src="/login/images/logo" alt="Submit" style="float:left" width="90" height="90">
+      <h1 id="one">CHMS</h1>
+    </div>
+  </div>
+  <h1 id="two">Mess Calculations</h1>
+  <div class="container">
+    <div class="form">
+      <div class="monyr">
+      <label  for="month">Month:</label>
+      <input type="month" id="month">
+    </div>
+      <table id="data-table">
+        <thead>
+          <tr>
+            <th>Data Item</th>
+            <th id="am">Amount</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Groceries</td>
+            <td><input type="number" class="amount"></td>
+          </tr>
+          <tr>
+            <td>Vegetables</td>
+            <td><input type="number" class="amount"></td>
+          </tr>
+          <tr>
+            <td>Gas</td>
+            <td><input type="number" class="amount"></td>
+          </tr>
+          <tr>
+            <td id="">Chicken</td>
+            <td><input type="number" class="amount"></td>
+          </tr>
+          <tr>
+            <td>Beef</td>
+            <td><input type="number" class="amount"></td>
+          </tr>
+          <tr>
+            <td>Fish</td>
+            <td><input type="number" class="amount"></td>
+          </tr>
+          <tr>
+            <td>Other</td>
+            <td><input type="number" class="amount"></td>
+          </tr>
+          <tr>  
+            <td>Employee Salary</td>
+            <td><input type="number" class="value"></td>
+          </tr>
+        </tbody>
+      </table>
+      <button onclick="calculateTotal()">Calculate</button>
+    
+    </div>
+
+    <div class="result">
+      <h2>Calculated Total Amount:</h2>
+      <p id="total-amount"></p>
+      <p id="month-year"></p>
+    </div>
+  </div>
+
+  <script src="calc.js"></script>
+</body>
+
+</html>
