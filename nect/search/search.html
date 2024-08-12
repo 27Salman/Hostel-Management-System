@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search</title>
+  <link href="search.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+  <div class="header">
+    <div id="left">
+      <input type="image" src="/login/images/logo" alt="Submit" style="float:left" width="90" height="90">
+      <h1 id="one">CHMS</h1>
+    </div>
+  </div>
+  <h1 id="two">Search Student</h1> 
+  <div class="container">
+    <input type="text" id="searchInput" placeholder="Enter a name">
+    <button id="searchButton">Search</button>
+  </div>  
+  <div class="detail">
+    <div id="resultContainer"></div>
+
+  <script>
+    document.getElementById('searchButton').addEventListener('click', search);
+
+    function search() {
+      var searchInput = document.getElementById('searchInput').value;
+
+      // Make an API call to retrieve the data from the backend
+      // Replace the following code with your backend code to fetch data from the database
+      var data = [
+        {
+          name: "salman",
+          studentId: "123456",
+          phoneNumber: "1234567890",
+          email: "johndoe@example.com",
+          roomNumber: "101",
+          photoUrl: "https://example.com/student1.jpg"
+        },
+        {
+          name: "Jane Smith",
+          studentId: "789012",
+          phoneNumber: "9876543210",
+          email: "janesmith@example.com",
+          roomNumber: "202",
+          photoUrl: "https://example.com/student2.jpg"
+        },
+        // Add more data objects here
+      ];
+
+      var resultContainer = document.getElementById('resultContainer');
+      resultContainer.innerHTML = '';
+
+      var foundData = data.find(function (item) {
+        return item.name.toLowerCase() === searchInput.toLowerCase();
+      });
+
+      if (foundData) {
+        var studentName = document.createElement('h2');
+        studentName.textContent = foundData.name;
+        resultContainer.appendChild(studentName);
+
+        var studentIdLabel = document.createElement('p');
+        studentIdLabel.innerHTML = 'Student ID: ' + foundData.studentId;
+        resultContainer.appendChild(studentIdLabel);
+
+        var phoneNumberLabel = document.createElement('p');
+        phoneNumberLabel.innerHTML = 'Phone Number: ' + foundData.phoneNumber;
+        resultContainer.appendChild(phoneNumberLabel);
+
+        var emailLabel = document.createElement('p');
+        emailLabel.innerHTML = 'Email ID: ' + foundData.email;
+        resultContainer.appendChild(emailLabel);
+
+        var roomNumberLabel = document.createElement('p');
+        roomNumberLabel.innerHTML = 'Room Number: ' + foundData.roomNumber;
+        resultContainer.appendChild(roomNumberLabel);
+
+        var photoImg = document.createElement('img');
+        photoImg.src = foundData.photoUrl;
+        photoImg.alt = 'Student Photo';
+        resultContainer.appendChild(photoImg);
+      } else {
+        var notFoundLabel = document.createElement('p');
+        notFoundLabel.innerHTML = 'No results found.';
+        resultContainer.appendChild(notFoundLabel);
+      }
+    }
+  </script>
+  
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="feedb.css">
+    <title>Complaint</title>
+</head>
+<body>
+    <div class="header">
+        <div id="left">
+          <input type="image" src="/login/images/logo" alt="Submit" style="float:left" width="90" height="90">
+          <h1 id="one">CHMS</h1>
+        </div>
+      </div>
+    <h1 id="two">Complaint Form</h1>
+    
+    <div class="bg-text">
+        <form method="post" action="#">
+            <fieldset>
+                <legend>Personal Information</legend>
+                <table>
+                    <tr>
+                        <td><label for="name" id="name-label">Name:</label></td>
+                        <td><input type="text" id="name" name="user_name" placeholder="Enter Your Name"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="id">Room: </label>
+                        </td>
+                        <td>
+                            <input type="tel" id="Room" name="user_room" placeholder="Enter Your Room Number">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="id">Student Id: </label>
+                        </td>
+                        <td>
+                            <input type="tel" id="Student Id" name="user_Id" placeholder="Enter Your Id Number">
+                        </td>
+                    </tr>
+                </table>
+
+            </fieldset>
+            <fieldset>
+                <div>
+                    <label for="dept">Type </label>
+            
+                    <select id="dept">
+                        <option value="dept1"></option>
+                        <option value="dept2">Maintanence</option>
+                        <option value="dept3">Food</option>
+                        <option value="dept6">OTHER...</option>
+                    </select>
+            
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Reason</legend>
+                <div>
+                    <textarea
+                    name="user_msg"
+                    rows="100"
+                    cols="100"
+                    placeholder="Reason for your leave"></textarea>
+                </div>
+            </fieldset>
+               
+            <div id="submitbutton">
+                <button type="submit" id="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

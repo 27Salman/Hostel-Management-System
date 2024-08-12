@@ -1,0 +1,47 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notification</title>
+    <link href="noti.css" type="text/css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="header">
+      <div id="left">
+        <input type="image" src="/login/images/logo" alt="Submit" style="float:left" width="90" height="90">
+        <h1 id="one">CHMS</h1>
+      </div>
+    </div>
+    <h1 id="two">Create Notification</h1>
+  <div class="container">
+
+    <form id="notification-form">
+
+      <div class="form-group">
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" required>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="priority">Priority:</label>
+        <select id="priority" name="priority" required>
+          <option value="high">High</option>
+          <option value="medium">Medium</option>
+          <option value="low">Low</option>
+        </select>
+
+      </div>
+
+      <div id="submitbutton">
+        <input type="submit" value="Send Notification">
+      </div>
+    </form>
+  </div>
+</body>
+</html>

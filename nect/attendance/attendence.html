@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Attendance</title>
+  <link href="attendence.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+  <div class="header">
+    <div id="left">
+      <input type="image" src="/login/images/logo" alt="Submit" style="float:left" width="90" height="90">
+      <h1 id="one">CHMS</h1>
+    </div>
+  </div>
+  <h1 id="two">Attendance</h1>
+  <div class="content">
+      <form id="attendanceForm" method="post" action="submit_attendance.php">
+      <label id="select" for="date">Select Date:</label>
+      <input type="date" id="date" name="date" required>
+
+    <table id="studentsTable">
+
+      <thead>
+        <tr>
+          <th>Student ID</th>
+          <th>Name</th>
+          <th>Absent</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>John Doe</td>
+          <td><input type="checkbox" name="attendance[]" value="1"></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Jane Smith</td>
+          <td><input type="checkbox" name="attendance[]" value="2"></td>
+        </tr>
+        <!-- Add more rows for each student -->
+      </tbody>
+    </table>
+    <div id="submitbutton">
+      <input type="submit" value="Submit">
+    </div>
+  </form>
+  </div>
+  
+</body>
+</html>

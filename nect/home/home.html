@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CHMS</title>
+  <link href="home.css" type="text/css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="header">
+    <div id="logo">
+      <input class="culogo" type="image" src="/login/images/logo">
+    </div>
+    <div class="log-name">
+      <h3>Central Ofiice For University Hostel</h3>
+      <h3>CUSAT Hostel Management System</h3>
+    </div>
+  </div>
+    <div class="nav">
+      <nav>
+        <ul>
+          <li><a href="#Home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="/nect/home/homenot/homenot.html">Notifications</a></li>
+        </ul>
+      </nav>
+    </div>
+  <div class="contents">
+    <div class="stulog">
+      <div class="fom">
+        <h2><b>STUDENT LOGIN</b></h2>
+        <form action="#" method="POST">
+          
+            <div class="form-group">
+                <label>Username:</label>
+                <div class="group">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                    <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
+                  </svg>
+                  <input type="text" class="form-control" placeholder="Username" required="required" />
+                </div>
+            </div>
+
+            <div class="form-group">
+              <label>Password:</label>
+              <div class="group">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-lock-fill" viewBox="0 0 16 16">
+                  <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/>
+                </svg>
+                <input type="password" id="password" name="password" placeholder="Password" required="required">
+                <i class="fa-solid fa-eye-slash" id="show-password"></i>
+              </div>
+            </div>
+
+          <div class="forgot">
+              <a href="#">Forgot Password?</a>
+          </div>
+          <button type="submit"><strong>Login</strong></button>   
+      </form>
+      <div class="line">
+      <h5 class="left"><a href="/admin/adminlog.html">ADMIN LOGIN</a></h5>
+      <h5 class="right"><a href="/ms admin/login/login.html">MS LOGIN</a></h5>
+    </div>
+     </div>
+     
+  </div>
+  <div class="image fade">        
+    <div class="animate">
+      <img class="mySlides w3-animate-fading" src="/nect/img/h1.webp" style="width:100%">
+      <img class="mySlides w3-animate-fading" src="/nect/img/Anagha.png" style="width:100%">
+      <img class="mySlides w3-animate-fading" src="/nect/img/Alakananda.png" style="width:100%">
+    </div>
+  </div>
+    <script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 9000);    
+}
+
+
+
+const showPassword = document.querySelector
+("#show-password");
+const passwordField = document.querySelector
+("#password");
+
+showPassword.addEventListener("click", function(){
+  this.classList.toggle("fa-eye");
+  const type = passwordField.getAttribute("type")
+  === "password" ? "text": "password";
+  passwordField.setAttribute("type",type);
+})
+
+
+  </script>
+</div>
+
+
+<div class="footer">
+
+  <div class="ab">
+  <section id="about" class="about">
+    <h2 class="fo"><b>About Us</b></h2>
+    <p>Welcome to CUSAT Hostels, a vibrant community that provides comfortable and secure accommodation for students pursuing their education at Cochin University of Science and Technology (CUSAT). We understand that a conducive living environment plays a vital role in supporting students' academic journey, and our aim is to create a home away from home for every resident.<br>
+      <br>
+      Our Hostels:
+      CUSAT Hostels offer separate facilities for male and female students, ensuring a safe and inclusive living experience. With well-maintained buildings and spacious rooms, we strive to provide a comfortable and conducive atmosphere for students to thrive.<br>
+      <br>
+      Comfort and Amenities:
+      We believe that a comfortable living space is essential for students' well-being and academic success. Each room in our hostels is equipped with essential furniture, including beds, study tables, chairs, and wardrobes. We also understand the importance of a pleasant living environment, and our hostels provide common areas for students to relax, socialize, and engage in recreational activities.<br>
+      <br>
+      Nutritious Meals:
+      We believe that good nutrition is crucial for students' overall well-being and academic performance. Our hostels feature mess or dining facilities that serve wholesome and balanced meals, taking into account diverse dietary preferences. We strive to provide nutritious and delicious food, prepared under hygienic conditions, to meet the dietary needs of our residents.<br>
+      <br>
+      Safety and Security:
+      The safety and security of our residents are of utmost importance to us. Our hostels are equipped with necessary security measures and have dedicated staff members who ensure a safe and secure living environment. We have implemented access control systems, CCTV surveillance, and round-the-clock security personnel to maintain a secure atmosphere within the hostels.</p>
+  </section>
+  </div>
+
+  <div class="con">
+  <section id="contact" class="about">
+    <h2 class="fo"><b>Contact Us</b></h2>
+    
+    <div class="first">
+    <h3><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+      <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+    </svg> Address</h3>
+    <p>Alakananda Hostel,<br>CUSAT Hostels, CUSAT.P.O,<br>Ernakulam - 682022</p>
+    </div>
+
+    <div class="second">
+    <h3><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
+      <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+    </svg> Contact Number</h3>
+    <p><b>Assistant Matron:</b><br>
+      Jayalakshmi Amma S</p>
+    <p><b>Assistant warden:</b><br>
+      Preetha S </p>
+    <p><b>Hostel Secretary:</b><br>
+      ARUNDHATHI B </p>
+    <p><b>Mess Secretary:</b><br>
+      APARNA S </p>
+    </div>
+
+    <div class="third">
+      <h3><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+        <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"/>
+      </svg> Email Address</h3>
+      <p>hostels@cusat.ac.in</p>
+    </div>
+
+    <div class="four">
+      <map name="aa"></map>
+    </div>
+  </section>
+  </div>
+  
+  <p class="copy"> &copy; Cochin University of Science and Technology </p>
+</div>
+
+</body>
+</html>

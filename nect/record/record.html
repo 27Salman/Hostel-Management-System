@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Records</title>
+  <link href="record.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+  <div class="header">
+    <div id="left">
+      <input type="image" src="/login/images/logo" alt="Submit" style="float:left" width="90" height="90">
+      <h1 id="one">CHMS</h1>
+    </div>
+  </div>
+  <h1 id="two">Records</h1>
+  <div class="content">
+    <table id="recordsTable">
+        <thead>
+          <tr>
+            <th>Student ID</th>
+            <th>Name</th>
+            <th>Room Number</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Records will be dynamically added here from the database -->
+        </tbody>
+      </table>
+    
+      <!-- Modal for displaying record details -->
+      <div id="recordModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Record Details</h2>
+          <div id="recordDetails"></div>
+        </div>
+      </div>
+    
+      <script src="record.js"></script>
+    </body>
+    </html>
